@@ -3,16 +3,18 @@
 #include <cmath>
 //para printf y scanf
 #include <cstdio>
+//para crear coleccion de tipo vector
+#include <vector>
 using namespace std;
 
 int main(){
-
+	
 /*------------------------------------------------------------------------------------------    Ejercicio  1
 
 A) Haga un programa que permita la entrada de datos, ingresando el nombre y apellido del
-usuario, adem·s debe mostrar el nombre_completo por pantalla. (considera los espacios)
-B) Ejemplifique, como se coloca un comentario de una o varias lÌneas.
-C) Como se baja un renglÛn al mostrar algo por pantalla, nombre alternativas.
+usuario, adem√°s debe mostrar el nombre_completo por pantalla. (considera los espacios)
+B) Ejemplifique, como se coloca un comentario de una o varias l√≠neas.
+C) Como se baja un rengl√≥n al mostrar algo por pantalla, nombre alternativas.
 Puntos A B y C : declaro string de 14 letras mas 1 extra
  para el simbolo predeterminado	*/
  
@@ -22,6 +24,7 @@ char nombre[15], apellido[15];
 cout<<"--------------------------          ejercicio 1  -----------------------------\n";
 cout << "Ingrese su nombre : \n" ;
 //asigno a la variable nombre el dato ingresado por teclado
+
 cin >> nombre;	
 
 //se repite lo anterior para el apellido
@@ -30,13 +33,14 @@ cin >> apellido;
 
 //muestro nombre completo e imprimo otra linea debajo 
 // otra opcion para bajar podria ser la de la linea 18
+
 cout <<"Hola "<<nombre <<" "<<apellido <<" "<<"paso abajo con endl"<< endl;
 cout <<" segui con el practico.. paso abajo   \n" ;
 
 
 //-------------------------------------------------------------------------------------------   Ejercicio  2	
-/*  Escribe un programa que lea de la entrada est·ndar el precio de un producto y muestre
-    en la salida est·ndar el precio del producto al aplicarle el IVA.*/
+/*  Escribe un programa que lea de la entrada est√°ndar el precio de un producto y muestre
+    en la salida est√°ndar el precio del producto al aplicarle el IVA.*/
 	
 	cout<<"--------------------------------    ejercicio 2    ------------------------------\n";
 
@@ -50,9 +54,9 @@ cout <<" segui con el practico.. paso abajo   \n" ;
 	
 /*--------------------------------------------------------------------------------------------- Ejercicio 3
 	
-	Realice un programa que lea de la entrada est·ndar los siguientes datos de una persona:
-	Edad: dato de tipo entero. Sexo: dato de tipo car·cter. Altura en metros: dato de tipo real. Tras
-	leer los datos, el programa debe mostrarlos en la salida est·ndar.*/
+	Realice un programa que lea de la entrada est√°ndar los siguientes datos de una persona:
+	Edad: dato de tipo entero. Sexo: dato de tipo car√°cter. Altura en metros: dato de tipo real. Tras
+	leer los datos, el programa debe mostrarlos en la salida est√°ndar.*/
 	
 	cout<<"-----------------------------        ejercicio 3.A     -----------------------------\n";
 
@@ -71,8 +75,8 @@ cout <<" segui con el practico.. paso abajo   \n" ;
 	
 /*--------------------------------------------------------------------------------------------- Ejercicio 3.B
 
-	Ejecute el programa del ejercicio anterior con entradas errÛneas y observe los
-	resultados. Por ejemplo, introduzca un dato de tipo car·cter cuando se espera un dato de tipo
+	Ejecute el programa del ejercicio anterior con entradas err√≥neas y observe los
+	resultados. Por ejemplo, introduzca un dato de tipo car√°cter cuando se espera un dato de tipo
 	entero. */
 	/*
 	cout<<"ejercicio 3.B ingresar mal los datos \n";
@@ -88,8 +92,8 @@ cout <<" segui con el practico.. paso abajo   \n" ;
 	
 	/* ----------------------------------------------------------------------------------------------  Ejercicio 4
 	
-	/*Haga un programa que tenga como entrada una cantidad de dinero en pesos argentinos, y su salida ser· el monto convertido a dÛlares.
-	 Tome la cotizaciÛn actual de dÛlar blue, redondear a 2 cifras.*/
+	/*Haga un programa que tenga como entrada una cantidad de dinero en pesos argentinos, y su salida ser√° el monto convertido a d√≥lares.
+	 Tome la cotizaci√≥n actual de d√≥lar blue, redondear a 2 cifras.*/
 	 cout << "-------------------------------     Ejercicio 4   ---------------------------" << endl;
 	 int pesos ;
 	 double dolares;
@@ -115,11 +119,11 @@ Ejercicio 5: Escriba un fragmento de programa que intercambie (swap) los valores
     swap(n1, n2);
     swap(n2,n3);
 
-    cout << "DespuÈs de aplicar SWAP : N1 = " << n1 << ", N2 = " << n2 <<", N3 = "<<n3<< endl;
+    cout << "Despu√©s de aplicar SWAP : N1 = " << n1 << ", N2 = " << n2 <<", N3 = "<<n3<< endl;
 
 		
 /*---------------------------------------------------------------------------------------  Ejercicio 6   A y B
-Ejercicio 6.1: Haga un programa en donde se ingresar· una cantidad X de segundos, para luego convertir a horas, minutos y segundos.*/
+Ejercicio 6.1: Haga un programa en donde se ingresar√° una cantidad X de segundos, para luego convertir a horas, minutos y segundos.*/
 	
     cout << "------------------------------------------    ejercicio 6.1  -------------------------------" << endl;
 
@@ -168,8 +172,8 @@ Ejercicio 6.1: Haga un programa en donde se ingresar· una cantidad X de segundos
 
 
 /*---------------------------------------------------------------------------------------------    Ejercicio 7 A y B .
-	Escriba un programa que lea de la entrada est·ndar los dos catetos de un tri·ngulo
-	rect·ngulo y escriba en la salida est·ndar su hipotenusa.		*/
+	Escriba un programa que lea de la entrada est√°ndar los dos catetos de un tri√°ngulo
+	rect√°ngulo y escriba en la salida est√°ndar su hipotenusa.		*/
 	 cout<<"----------------------------------------------     ejercicio 7 A y B \n    -------------------------------"<<endl;
 	 double c1, c2;
      cout << "Ingrese el primer cateto: \n";
@@ -179,9 +183,9 @@ Ejercicio 6.1: Haga un programa en donde se ingresar· una cantidad X de segundos
      
      //7-A:Perimetro y superficie y 7-B:Hipotenusa
      //sqrt = calcular la raiz cuadrada de un num
-     //pow = eleva un num a una potencia especÌfica. Toma dos argumentos: la base y el exponente. Devuelve el resul de elevar la base al exponente.(base=2, exp=3,(2x2x2) r=8)
+     //pow = eleva un num a una potencia espec√≠fica. Toma dos argumentos: la base y el exponente. Devuelve el resul de elevar la base al exponente.(base=2, exp=3,(2x2x2) r=8)
 	double hipotenusa = sqrt(pow(c1, 2) + pow(c2, 2));
-    // Calcular el perÌmetro
+    // Calcular el per√≠metro
     double perimetro = c1 + c2 + hipotenusa;
     // Calcular la superficie
     double superficie = (c1 * c2) / 2;
@@ -193,8 +197,8 @@ Ejercicio 6.1: Haga un programa en donde se ingresar· una cantidad X de segundos
     
 /*---------------------------------------------------------------------------------------------------------- Ejercicio 8
 
-	La calificaciÛn final de un estudiante es la media ponderada de tres notas: la nota de pr·cticas que cuenta un 30% del total, la nota teÛrica que cuenta un 60% y la nota de participaciÛn que cuenta el 10% restante. Escriba un programa que lea de la entrada est·ndar las 
-	tres notas de un alumno y escriba en la salida est·ndar su nota final. Permita ingresar por teclado N, la cantidad de alumnos a calificar. */
+	La calificaci√≥n final de un estudiante es la media ponderada de tres notas: la nota de pr√°cticas que cuenta un 30% del total, la nota te√≥rica que cuenta un 60% y la nota de participaci√≥n que cuenta el 10% restante. Escriba un programa que lea de la entrada est√°ndar las 
+	tres notas de un alumno y escriba en la salida est√°ndar su nota final. Permita ingresar por teclado N, la cantidad de alumnos a calificar. */
 	cout<<"------------------------------------------------     ejercicio 8 ---------------------------------"<<endl;
 	double notaTeo, notaPrac, notaParti, notaFinal;
 	int cantAlum=0;
@@ -204,13 +208,13 @@ Ejercicio 6.1: Haga un programa en donde se ingresar· una cantidad X de segundos
 	
 	while(cantAlum>0){
 	
-    cout << "Ingrese la nota de pr·cticas: \n";
+    cout << "Ingrese la nota de pr√°cticas: \n";
     cin >> notaPrac;
 
-    cout << "Ingrese la nota teÛrica: \n";
+    cout << "Ingrese la nota te√≥rica: \n";
     cin >> notaTeo;
 
-    cout << "Ingrese la nota de participaciÛn: \n";
+    cout << "Ingrese la nota de participaci√≥n: \n";
     cin >> notaParti;
 
     notaFinal = (notaPrac * 0.3) + (notaTeo * 0.6) + (notaParti * 0.1);
@@ -221,7 +225,7 @@ Ejercicio 6.1: Haga un programa en donde se ingresar· una cantidad X de segundos
 
 /*-------------------------------------------------------------------------------------------------------------- Ejercicio 9
 /*Ejercicio 9: Escriba un programa que ingrese nombre y tiempo de nado de dos nadadoras. 
-Luego determine y muestre cu·l de ellas llego primero.*/
+Luego determine y muestre cu√°l de ellas llego primero.*/
 	cout << "-----------------------------------------    Ejercicio 9  -------------------------------------"<<endl;
 	string nadadora1,nadadora2;
 	double t1,t2;
@@ -241,27 +245,27 @@ Luego determine y muestre cu·l de ellas llego primero.*/
 	else{cout << "Llego primero "<< nadadora2 << endl;}
 	
 	/*----------------------------------------------------------------------------------------------------------  Ejercicio 10.
-	Escriba un programa que lea de la entrada est·ndar el nombre de una persona en un
-	 arreglo de caracteres. Adem·s, pide el aÒo de nacimiento, y determina su edad en aÒos complidos.*/
+	Escriba un programa que lea de la entrada est√°ndar el nombre de una persona en un
+	 arreglo de caracteres. Adem√°s, pide el a√±o de nacimiento, y determina su edad en a√±os complidos.*/
 	 char nom[14];
 	 int anio;
 	 cout << "--------------------------------------     Ejercicio 10     ------------------------------------" << endl;
 	 cout << "Ingrese el nombre"<<endl;
 	 cin >> nom;
-	 cout <<"ingrese aÒo de nacimiento ej: 1970"<< endl;
+	 cout <<"ingrese a√±o de nacimiento ej: 1970"<< endl;
 	 cin >> anio;
 	 edad= 2023-anio;
 	 cout <<"La edad de "<<nom <<"es :"<<" "<<edad<<endl;
 	
 	
 	/*---------------------------------------------------------------------------------------------------------  Ejercicio 11  
-	Escribe un programa que lea de la entrada est·ndar dos n˙meros y muestre en la salida
-	est·ndar su suma, resta, multiplicaciÛn y divisiÛn. */
+	Escribe un programa que lea de la entrada est√°ndar dos n√∫meros y muestre en la salida
+	est√°ndar su suma, resta, multiplicaci√≥n y divisi√≥n. */
 	cout<<"-----------------------------------------     ejercicio 11     -------------------------------------\n";
 	float numero1, numero2;
-    cout << "Ingrese el primer n˙mero: ";
+    cout << "Ingrese el primer n√∫mero: ";
     cin >> numero1;
-    cout << "Ingrese el segundo n˙mero: ";
+    cout << "Ingrese el segundo n√∫mero: ";
     cin >> numero2;
     // Realizar las operaciones
     float multiplicacion = numero1 * numero2;
@@ -270,8 +274,8 @@ Luego determine y muestre cu·l de ellas llego primero.*/
     float restaa = numero1 - numero2;
    
     // Mostrar los resultados 
-    cout << "MultiplicaciÛn: " << multiplicacion << endl;
-    cout << "DivisiÛn: " << division << endl;
+    cout << "Multiplicaci√≥n: " << multiplicacion << endl;
+    cout << "Divisi√≥n: " << division << endl;
     cout << "Suma: " << suma << endl;
     cout << "Resta: " << restaa << endl;
     
@@ -282,7 +286,7 @@ teniendo en cuenta que: f(a,b,c) NO TENGO IDEA PROFE.
  	
 /*---------------------------------------------------------------------------------------------------- Ejercicio 13.
 
-	Escribe la siguiente expresiÛn en C++. Use precisiÛn para la salida del cout.
+	Escribe la siguiente expresi√≥n en C++. Use precisi√≥n para la salida del cout.
 	A) f(a,b)= (a/b) + 1
 	B) f(a,b)= (a+b)/(c+d)
 	C) f(a,b)= (a+(b/c))/(d+(e/f))
@@ -323,30 +327,156 @@ teniendo en cuenta que: f(a,b,c) NO TENGO IDEA PROFE.
     result = sqrt(x)/y*y-1 ;
     cout << result << endl;
     
-    /*Parte B Bucles: Conjunto de instrucciones que se repiten al cumplirse una condiciÛn. -----------------------------------------------*/
+    /*Parte B Bucles: Conjunto de instrucciones que se repiten al cumplirse una condici√≥n. -----------------------------------------------*/
     
-  /*Ejercicio 1: Realice un programa que solicite de la entrada est·ndar un entero del 1 al 10 y
-   muestre en la salida est·ndar su tabla de multiplicar. Use un men˙ para elegir varias tablas diferentes a elecciÛn.*/ 
+  /*Ejercicio 1: Realice un programa que solicite de la entrada est√°ndar un entero del 1 al 10 y
+   muestre en la salida est√°ndar su tabla de multiplicar. Use un men√∫ para elegir varias tablas diferentes a elecci√≥n.*/ 
    cout<< "Ejercicio 1 Parte B Bucles\n";
-   cout<<"En este ej encontre una forma con menu y sin menu.."<<endl;
-   x=0;
-   do{cout <<"Ingrese un num entero del 1 al 10\n";
-   cin >> x; }while( x<1 || x>10);
-   
-   for(int h=0; h<11;h++){
-   	int r=h*x;
-   	cout <<x<<"X"<<h<<" ="<<r<<endl;
-   }
-   cout << "------------------- TABLAS MENU -----------------" << endl;
-   
-   
   
-  
-   		return 0;
+   cout << "---------------------------- TABLAS MENU ------------------------------" << endl;
+   do{
+   
+   	for( int h=1; h<11;h++){
+   	cout <<"ingrese "<<h<<"para ver sus tablas del 1 al 10"<<endl;
    	
    }
+   cout <<"Ingrese 11 para salir"<<endl;
+   cin >> x;
    
-  
+   switch(x){
+
+	   case 1: for(int h=1; h<11;h++){
+   		int r=h*x;
+   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+   		}
+   		break;
+   	   case 2: for(int h=1; h<11;h++){
+   		int r=h*x;
+   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+   		}
+   		break;		
+   		case 3: for(int h=1; h<11;h++){
+   		int r=h*x;
+   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+   		}
+   		break;
+   		case 4: for(int h=1; h<11;h++){
+   		int r=h*x;
+   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+   		}
+   		break;
+   		case 5: for(int h=1; h<11;h++){
+   		int r=h*x;
+   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+   		}
+   		break;
+   		case 6: for(int h=1; h<11;h++){
+   		int r=h*x;
+   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+   		}
+   		break;
+   		case 7: for(int h=1; h<11;h++){
+   		int r=h*x;
+   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+   		}
+   		break;
+   		case 8: for(int h=1; h<11;h++){
+   		int r=h*x;
+   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+   		}
+   		break;
+   		case 9: for(int h=1; h<11;h++){
+   		int r=h*x;
+   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+   		}
+   		break;
+   		case 10: for(int h=1; h<11;h++){
+   		int r=h*x;
+   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+   		}
+   		break;
+   	}
+   if (x==11){
+   	cout << "fin del programa,adios "<<endl; 
+   }
+   
+}while(x!=11);
+ 
+
+   	/*Ejercicio 2: Realice un programa que lea de la entrada est√°ndar n√∫meros hasta que se introduzca un cero. En ese momento el programa debe
+	   terminar y mostrar en la salida est√°ndar el n√∫mero de valores le√≠dos mayores que cero. Usar una estructura do-while.*/
+	   cout << "------------------- Ejercicio 2 Parte B  -----------------------"<< endl;
+	   //creo una coleccion porque no se cuantos ingresaran para doubles por si ingresan con .
+	   vector <double> coleccion; 
+	   
+	   do {
+	    cout <<"Ingrese un numero distinto de 0"<<endl;
+	    cin >> x;
+	    if(x>0){
+	   	 //agrego al vector
+	   	 coleccion.push_back(x);}
+	   } 
+	   while(x!=0);
+	   //   ¬°siempre agregar punto y como al finalizar el do while!
+	    // Acceder a los elementos de la colecci√≥n
+        cout << "Elementos de la colecci√≥n mayores a 0:" << endl;
+        for (int i=0;i<coleccion.size();i++) { 	
+        cout << coleccion[i] <<" ,"<<endl;
+
+    }
+	   /*Ejercicios 3: Realice un programa que calcule y muestre en la salida est√°ndar, 
+	   la suma de los cuadrados de los 10 primeros enteros mayores que cero. Mostrar un mensaje de invalidez, si ingresa un negativo.*/
+	int sum=0;
+	for(int i =1; i<11;i++){
+		cout<< "Ingrese el"<<i<<endl;
+		cin >> x;
+		if(x==i){
+		sum += x * i;
+		}if(x<0){
+			cout<<"Error: Num negativo, vuelva a ingresar el numero"<<endl;
+			i--;
+		}if(x!=i && x>0){cout<<"Numero incorrecto, vuelva a ingresarlo..."<<endl;
+		i--;
+		}
+	}
+	   cout << "suma total del cuadrado de los 10 prim num :"<<sum <<endl;
+	   
+	   /*Ejercicio 4: Escriba un programa que tome cada 4 horas la temperatura exterior, ley√©ndola durante un per√≠odo de 24 horas. 
+	   Es decir, debe leer 6 temperaturas. Calcule la temperatura media del d√≠a, la temperatura m√°s alta y la m√°s baja.*/
+	   
+	   /*Ejercicio 5: Escriba un programa que lea valores enteros hasta que se introduzca un valor en el rango [20-30] o se introduzca el valor 0. 
+	   El programa debe entregar la suma de los valores mayores a 0 introducidos.*/
+	   
+	   /*Ejercicio 6: Escriba un programa que calcule num^exp, donde tanto num como exp son enteros positivos, sin utilizar la funci√≥n pow. 
+	   Donde num ser√° una base generada de forma aleatoria entre
+	    2 y 42, y exp ser√° ingresada por teclado no mayor a 5. Usar las librer√≠as stdlib.h y cmath. */
+   	
+   	
+	 /*Ejercicio 7:
+       A-Escriba un programa que calcule usando un while, el valor de: 1 + 2 + 3 +...+ n.
+       B-Escriba un programa que calcule usando un for, el valor de: 1 + 3 + 5 +...+ 2n-1*/  
+       
+       
+    /*Ejercicio 8: En una clase de 5 alumnos se han realizado 3 ex√°menes, y se requiere determinar seg√∫n se elija una opci√≥n el n√∫mero de: 
+	 a) Alumnos que aprobaron todos los ex√°menes.
+	 b) Alumnos que aprobaron al menos un examen. c) Alumnos que aprobaron √∫nicamente el √∫ltimo examen.   */
+	 
+    /*Ejercicio 9: Escriba un programa que calcule el valor de: 1 * 2 * 3 *...* n (factorial)*/
+	
+	/*Ejercicio 10: Escriba un programa que calcule el valor de: 1! +2! + 3! + ... + n! (suma de factoriales).*/
+	
+	/*Ejercicio 11: Escriba un programa que calcule el valor de: 2^1+2^2+2^3+...+2^n  */
+	
+	/*Ejercicio 12: Hacer un programa que calcule el resultado de la siguiente expresi√≥n: 1-2+3-4+5-6...n  */
+	
+	/*Ejercicio 13: Hacer un programa que muestre la serie Fibonacci, mostrando sus elementos desde el 1..hasta n. 
+	Ej.: si n=13, nos muestra la salida: Fibonacci(13)= 1 1 2 3 5 8 13. */
+	   
+       
+	   //fin del main
+           	   		return 0;
+
+   }
    
    
 
