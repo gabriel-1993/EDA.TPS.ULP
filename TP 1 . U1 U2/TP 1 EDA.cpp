@@ -5,10 +5,15 @@
 #include <cstdio>
 //para crear coleccion de tipo vector
 #include <vector>
+//generar num aleatorio
+#include<stdlib.h>
+//libreria que nos permite saber cuantos segundos han pasado desde una fecha en 1970, osea siempre va cambiando el valor
+#include<time.h>
 using namespace std;
 
 int main(){
-
+  // Crear un generador de números aleatorios parte 2 ejercicio 6 linea 560
+   
 /* ----------------------------------------------------     PARTE   A   --------------------------------------*/       
         //al declarar x fuera del do puedo aplicarlo tanto en el do como en el switch
 		int x;
@@ -388,163 +393,238 @@ break;
     
     
     
-    
-    
-    
+    do{  cout << "Ingrese un numero Parte B: 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 "<<endl;
+         cout << "  9 - 10 - 11 - 12 no esta - 13 - 14=SALIR  "<<endl;
+         cin >> x;
+    	
+    	//cambio la declaracion de las variables y las declaro fuera del switch
+    	vector <double> coleccion; 
+    	vector<int> coleccion5;
+		int suma,hora,cont,aux,exp,resultado,aleatorioMin,aleatorioMax;
+    	switch(x) {
+    		
+    		case 1: /*Ejercicio 1: Realice un programa que solicite de la entrada estándar un entero del 1 al 10 y
+   			muestre en la salida estándar su tabla de multiplicar. Use un menú para elegir varias tablas diferentes a elección.*/ 
+   			cout<< "Ejercicio 1 Parte B Bucles "<<endl;
   
-  
-  /*Ejercicio 1: Realice un programa que solicite de la entrada estándar un entero del 1 al 10 y
-   muestre en la salida estándar su tabla de multiplicar. Use un menú para elegir varias tablas diferentes a elección.*/ 
-   cout<< "Ejercicio 1 Parte B Bucles "<<endl;
-  
-   cout << "---------------------------- TABLAS MENU ------------------------------" << endl;
-   do{
-   
-   	for( int h=1; h<11;h++){
-   	cout <<"ingrese "<<h<<"para ver sus tablas del 1 al 10"<<endl;
-   	
-   }
-   cout <<"Ingrese 11 para salir"<<endl;
-   cin >> x;
-   
-   
-   switch(x){
+   			cout << "---------------------------- TABLAS MENU ------------------------------" << endl;
+   				do{
+   				for( int h=1; h<11;h++){
+   					cout <<"ingrese "<<h<<"para ver sus tablas del 1 al 10"<<endl;
+   				}
+   				cout <<"Ingrese 11 para salir"<<endl;
+   				cin >> x;
+			switch(x){
 
-	   case 1: for(int h=1; h<11;h++){
-   		int r=h*x;
-   		cout <<x<<"X"<<h<<" ="<<r<<endl;
-   		}
-   		break;
-   	   case 2: for(int h=1; h<11;h++){
-   		int r=h*x;
-   		cout <<x<<"X"<<h<<" ="<<r<<endl;
-   		}
-   		break;		
-   		case 3: for(int h=1; h<11;h++){
-   		int r=h*x;
-   		cout <<x<<"X"<<h<<" ="<<r<<endl;
-   		}
-   		break;
-   		case 4: for(int h=1; h<11;h++){
-   		int r=h*x;
-   		cout <<x<<"X"<<h<<" ="<<r<<endl;
-   		}
-   		break;
-   		case 5: for(int h=1; h<11;h++){
-   		int r=h*x;
-   		cout <<x<<"X"<<h<<" ="<<r<<endl;
-   		}
-   		break;
-   		case 6: for(int h=1; h<11;h++){
-   		int r=h*x;
-   		cout <<x<<"X"<<h<<" ="<<r<<endl;
-   		}
-   		break;
-   		case 7: for(int h=1; h<11;h++){
-   		int r=h*x;
-   		cout <<x<<"X"<<h<<" ="<<r<<endl;
-   		}
-   		break;
-   		case 8: for(int h=1; h<11;h++){
-   		int r=h*x;
-   		cout <<x<<"X"<<h<<" ="<<r<<endl;
-   		}
-   		break;
-   		case 9: for(int h=1; h<11;h++){
-   		int r=h*x;
-   		cout <<x<<"X"<<h<<" ="<<r<<endl;
-   		}
-   		break;
-   		case 10: for(int h=1; h<11;h++){
-   		int r=h*x;
-   		cout <<x<<"X"<<h<<" ="<<r<<endl;
-   		}
-   		break;
-   	}
-   if (x==11){
-   	cout << "fin del programa,adios "<<endl; 
-   }
-   
-}while(x!=11);
- 
-
-   	/*Ejercicio 2: Realice un programa que lea de la entrada estándar números hasta que se introduzca un cero. En ese momento el programa debe
-	   terminar y mostrar en la salida estándar el número de valores leídos mayores que cero. Usar una estructura do-while.*/
-	   cout << "------------------- Ejercicio 2 Parte B  -----------------------"<< endl;
-	   //creo una coleccion porque no se cuantos ingresaran para doubles por si ingresan con .
-	   vector <double> coleccion; 
+	   			case 1: for(int h=1; h<11;h++){
+   				int r=h*x;
+   				cout <<x<<"X"<<h<<" ="<<r<<endl;
+   				}
+   				break;
+   	   			case 2: for(int h=1; h<11;h++){
+   				int r=h*x;
+   				cout <<x<<"X"<<h<<" ="<<r<<endl;
+   				}
+   				break;		
+   					case 3: for(int h=1; h<11;h++){
+		   		int r=h*x;
+		   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+		   		}
+		   		break;
+		   		case 4: for(int h=1; h<11;h++){
+		   		int r=h*x;
+		   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+		   		}
+		   		break;
+		   		case 5: for(int h=1; h<11;h++){
+		   		int r=h*x;
+		   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+		   		}
+		   		break;
+		   		case 6: for(int h=1; h<11;h++){
+		   		int r=h*x;
+		   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+		   		}
+		   		break;
+		   		case 7: for(int h=1; h<11;h++){
+		   		int r=h*x;
+		   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+		   		}
+		   		break;
+		   		case 8: for(int h=1; h<11;h++){
+		   		int r=h*x;
+		   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+		   		}
+		   		break;
+		   		case 9: for(int h=1; h<11;h++){
+		   		int r=h*x;
+		   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+		   		}
+		   		break;
+		   		case 10: for(int h=1; h<11;h++){
+		   		int r=h*x;
+		   		cout <<x<<"X"<<h<<" ="<<r<<endl;
+		   		}
+		   		
+		   	}
+				if (x==11){
+			   	cout << "fin del programa,adios "<<endl; 
+		    }  
+				}while(x!=11);			
+    			break;
+    			
+    		case 2:
+    			 	/*Ejercicio 2: Realice un programa que lea de la entrada estándar números hasta que se introduzca un cero. En ese momento el programa debe
+					   terminar y mostrar en la salida estándar el número de valores leídos mayores que cero. Usar una estructura do-while.*/
+					   cout << "------------------- Ejercicio 2 Parte B  -----------------------"<< endl;
+					   //creo una coleccion porque no se cuantos ingresaran para doubles por si ingresan con .
+					   
+					   do {
+					    cout <<"Ingrese un numero distinto de 0"<<endl;
+					    cin >> x;
+					    if(x>0){
+					   	 //agrego al vector
+					   	 coleccion.push_back(x);}
+					   } 
+					   while(x!=0);
+					   //   ¡siempre agregar punto y como al finalizar el do while!
+					    // Acceder a los elementos de la colección
+				        cout << "Elementos de la colección mayores a 0:" << endl;
+				        for (int i=0;i<coleccion.size();i++) { 	
+				        cout << coleccion[i] <<" ,"<<endl;
+				
+				    }
+    				break;	
+			case 3:
+				  /*Ejercicios 3: Realice un programa que calcule y muestre en la salida estándar, 
+	  				 la suma de los cuadrados de los 10 primeros enteros mayores que cero. Mostrar
+					    un mensaje de invalidez, si ingresa un negativo.*/
+				suma=0;
+				for(int i =1; i<11;i++){
+					cout<< "Ingrese el"<<i<<endl;
+					cin >> x;
+					if(x==i){
+					suma += x * i;
+					}if(x<0){
+						cout<<"Error: Num negativo, vuelva a ingresar el numero"<<endl;
+						i--;
+					}if(x!=i && x>0){cout<<"Numero incorrecto, vuelva a ingresarlo..."<<endl;
+					i--;
+					}
+				}
+	   			cout << "suma total del cuadrado de los 10 prim num :"<<suma <<endl;
+    			break;
+			case 4:
+				  
+		   /*Ejercicio 4: Escriba un programa que tome cada 4 horas la temperatura exterior, leyéndola durante un período de 24 horas. 
+		   Es decir, debe leer 6 temperaturas. Calcule la temperatura media del día, la temperatura más alta y la más baja.*/
 	   
-	   do {
-	    cout <<"Ingrese un numero distinto de 0"<<endl;
-	    cin >> x;
-	    if(x>0){
-	   	 //agrego al vector
-	   	 coleccion.push_back(x);}
-	   } 
-	   while(x!=0);
-	   //   ¡siempre agregar punto y como al finalizar el do while!
-	    // Acceder a los elementos de la colección
-        cout << "Elementos de la colección mayores a 0:" << endl;
-        for (int i=0;i<coleccion.size();i++) { 	
-        cout << coleccion[i] <<" ,"<<endl;
-
-    }
-	   /*Ejercicios 3: Realice un programa que calcule y muestre en la salida estándar, 
-	   la suma de los cuadrados de los 10 primeros enteros mayores que cero. Mostrar un mensaje de invalidez, si ingresa un negativo.*/
-	int sum=0;
-	for(int i =1; i<11;i++){
-		cout<< "Ingrese el"<<i<<endl;
-		cin >> x;
-		if(x==i){
-		sum += x * i;
-		}if(x<0){
-			cout<<"Error: Num negativo, vuelva a ingresar el numero"<<endl;
-			i--;
-		}if(x!=i && x>0){cout<<"Numero incorrecto, vuelva a ingresarlo..."<<endl;
-		i--;
-		}
-	}
-	   cout << "suma total del cuadrado de los 10 prim num :"<<sum <<endl;
-	   
-	   /*Ejercicio 4: Escriba un programa que tome cada 4 horas la temperatura exterior, leyéndola durante un período de 24 horas. 
-	   Es decir, debe leer 6 temperaturas. Calcule la temperatura media del día, la temperatura más alta y la más baja.*/
-	   
-	   cout<< "00:00HS Ingrese temperatura exterior por favor..."<<endl;
-	   cin >> x;
-	    int hora=0;
-	   int cont=0;
-
-	   for(int i=0;i<25;i++){
-	   	cont++;
-	   	if(cont==4){
-	   		cout<<"Hora: "<<hora <<endl;
-	   		cout<<"Ingrese temp exterior por favor..."<<endl;
-	   		cin >>x;
-	   		cont=0;
+		   cout<< "00:00HS Ingrese temperatura exterior por favor..."<<endl;
+		   cin >> x;
+		    hora=0;
+		    cont=0;
+	
+		   for(int i=0;i<25;i++){
+		   	cont++;
+		   	if(cont==4){
+		   		cout<<"Hora: "<<hora <<endl;
+		   		cout<<"Ingrese temp exterior por favor..."<<endl;
+		   		cin >>x;
+		   		cont=0;
+			   }
+			hora++;
 		   }
-		hora++;
+    			break;
+    		case 5:			
+				   /*Ejercicio 5: Escriba un programa que lea valores enteros hasta que se introduzca un valor en el rango [20-30] o se introduzca
+				    el valor 0. 
+				   El programa debe entregar la suma de los valores mayores a 0 introducidos.*/
+				   suma=0;
+				   do{ cout << "Ingrese un valor entero"<<endl;
+				   cin >> x;
+				   if(x>0){
+				   	suma+=x;
+				   }
+				   }while(x<20 && x>30 && x!=0);
+				   cout << "La suma total de n mayores a 0 = "<<suma<<endl;
+    			break;
+    			case 6:	   
+	   				/*Ejercicio 6: Escriba un programa que calcule num^exp, donde tanto num como exp son enteros positivos, 
+	   				sin utilizar la función pow. Donde num será una base generada de forma aleatoria entre
+	    			2 y 42, y exp será ingresada por teclado no mayor a 5. Usar las librerías stdlib.h y cmath. */
+	    			x=0;
+	    			exp=0;
+	    		// Crear un generador de números aleatorios
+				srand(time(NULL));
+				aleatorioMin=2;
+				aleatorioMax=42;
+				x = aleatorioMin + rand() % (aleatorioMax +1 - aleatorioMin) ;
 
-	   	
-	   }
-	   
-	   
-	   /*Ejercicio 5: Escriba un programa que lea valores enteros hasta que se introduzca un valor en el rango [20-30] o se introduzca el valor 0. 
-	   El programa debe entregar la suma de los valores mayores a 0 introducidos.*/
-	   
-	   /*Ejercicio 6: Escriba un programa que calcule num^exp, donde tanto num como exp son enteros positivos, sin utilizar la función pow. 
-	   Donde num será una base generada de forma aleatoria entre
-	    2 y 42, y exp será ingresada por teclado no mayor a 5. Usar las librerías stdlib.h y cmath. */
-   	
-   	
-	 /*Ejercicio 7:
-       A-Escriba un programa que calcule usando un while, el valor de: 1 + 2 + 3 +...+ n.
-       B-Escriba un programa que calcule usando un for, el valor de: 1 + 3 + 5 +...+ 2n-1*/  
-       
-       
-    /*Ejercicio 8: En una clase de 5 alumnos se han realizado 3 exámenes, y se requiere determinar según se elija una opción el número de: 
-	 a) Alumnos que aprobaron todos los exámenes.
-	 b) Alumnos que aprobaron al menos un examen. c) Alumnos que aprobaron únicamente el último examen.   */
-	 
+    			// Imprimir el número aleatorio generado
+    			cout << "Numero aleatorio: " << x << endl;
+					do{
+	    			cout << "Ingrese el exp entre 1 y 5"<<endl;
+	    			cin >> exp;
+					}while(x<1 || x>5);
+					for( int i=0;i<exp;i++){
+						resultado=x*x ;
+					}
+					cout << "Resultado de "<<x<<"^"<<exp<<"="<<resultado<<endl; 
+					
+    			break;
+    		case 7:	
+	 			/*Ejercicio 7:
+       			A-Escriba un programa que calcule usando un while, el valor de: 1 + 2 + 3 +...+ n.
+      	 		B-Escriba un programa que calcule usando un for, el valor de: 1 + 3 + 5 +...+ 2n-1*/  
+      	 		x=0;
+      	 		resultado=0;
+      	 		cont=1;
+      	 		    //primero verifica que ingresen un numero mayor a 0
+      	 			do{
+      	 			cout <<"Para sumar los num desde 1 hasta el valor ingresado, ingrese un limite "<<endl;
+      	 			cin >> x;
+				   }while (x<1);
+				   
+      	 	cout<< "valor de ya ingresado ;"<<x<<endl;
+      	 		while(cont<x){
+      	 			
+      	 			aux=1+cont;
+       	 			resultado=  cont + aux;	
+      	 			cout<< "Suma :"<<cont<<"+"<<aux<<"="<<resultado<<endl;
+      	 			cont++;
+				   }
+    				cout << "El resultado total es"<<resultado<<endl;
+    			break;	
+    	
+    		case 8:
+    			 /*Ejercicio 8: En una clase de 5 alumnos se han realizado 3 exámenes, y se requiere determinar según se elija una opción el número
+				  de: a) Alumnos que aprobaron todos los exámenes.
+					  b) Alumnos que aprobaron al menos un examen. 
+					  c) Alumnos que aprobaron únicamente el último examen.   */
+					  for( int i=0; i<5;i++){
+					  	
+					  	
+					  	
+					  }
+					 
+    			break;
+    		case 9:
+    			break;
+    		case 10:
+    			break;
+    		case 11:
+    			break;
+    		case 12:
+    			break;
+    		case 13:
+    			break;
+    	
+		}
+	
+    	
+    	
+	}while(x!=14);
+     
     /*Ejercicio 9: Escriba un programa que calcule el valor de: 1 * 2 * 3 *...* n (factorial)*/
 	
 	/*Ejercicio 10: Escriba un programa que calcule el valor de: 1! +2! + 3! + ... + n! (suma de factoriales).*/
@@ -555,17 +635,18 @@ break;
 	
 	/*Ejercicio 13: Hacer un programa que muestre la serie Fibonacci, mostrando sus elementos desde el 1..hasta n. 
 	Ej.: si n=13, nos muestra la salida: Fibonacci(13)= 1 1 2 3 5 8 13. */
-	   
-       
-       
-     
-       
-   		
+	   	
        
 	   //fin del main
            	   		return 0;
 
    }
+   
+
+   
+
+ 
+
    
 
    
