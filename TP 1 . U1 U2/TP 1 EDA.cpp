@@ -400,7 +400,7 @@ break;
     	//cambio la declaracion de las variables y las declaro fuera del switch
     	vector <double> coleccion; 
     	vector<int> coleccion5;
-		int suma,hora,cont,aux,exp,resultado,aleatorioMin,aleatorioMax;
+		int suma,hora,cont,aux,exp,resultado,aleatorioMin,aleatorioMax,alumnos,examenes,opcion,factorial,n;
     	switch(x) {
     		
     		case 1: /*Ejercicio 1: Realice un programa que solicite de la entrada estándar un entero del 1 al 10 y
@@ -601,16 +601,94 @@ break;
 				  de: a) Alumnos que aprobaron todos los exámenes.
 					  b) Alumnos que aprobaron al menos un examen. 
 					  c) Alumnos que aprobaron únicamente el último examen.   */
-					  for( int i=0; i<5;i++){
-					  	
-					  	
-					  	
-					  }
-					 
+		    alumnos = 5;
+		    examenes = 3;
+		    opcion;
+		
+		    cout << "Ingrese la opción (1 :aprobaron todos los examenes, 2 :aprobaron al menos un examen o 3 :aprobaron unicamente el ultimo examen): "<<endl;
+		    cin >> opcion;
+		
+		    switch(opcion) {
+		        case 1: {
+		            int aprobados = 0;
+		            for(int i = 0; i < alumnos; i++) {
+		                int contador = 0;
+		                for(int j = 0; j < examenes; j++) {
+		                    cout << "Ingrese el resultado del examen " << j+1 << " para el alumno " << i+1 << ": ";
+		                    int resultado;
+		                    cin >> resultado;
+		                    if(resultado >= 60) {
+		                        contador++;
+		                    }
+		                }
+		                if(contador == examenes) {
+		                    aprobados++;
+		                }
+		            }
+		            cout << "El número de alumnos que aprobaron todos los exámenes es: " << aprobados << endl;
+		            break;
+		        }
+		        case 2: {
+		            int aprobados = 0;
+		            for(int i = 0; i < alumnos; i++) {
+		                int contador = 0;
+		                for(int j = 0; j < examenes; j++) {
+		                    cout << "Ingrese el resultado del examen " << j+1 << " para el alumno " << i+1 << ": ";
+		                    int resultado;
+		                    cin >> resultado;
+		                    if(resultado >= 60) {
+		                        contador++;
+		                        break;
+		                    }
+		                }
+		                if(contador > 0) {
+		                    aprobados++;
+		                }
+		            }
+		            cout << "El número de alumnos que aprobaron al menos un examen es: " << aprobados << endl;
+		            break;
+		        }
+		        case 3: {
+		            int aprobados = 0;
+		            for(int i = 0; i < alumnos; i++) {
+		                int contador = 0;
+		                for(int j = 0; j < examenes; j++) {
+		                    cout << "Ingrese el resultado del examen " << j+1 << " para el alumno " << i+1 << ": ";
+		                    int resultado;
+		                    cin >> resultado;
+		                    if(j == examenes-1 && resultado >= 60) {
+		                        contador++;
+		                    } else if(j == examenes-1 && resultado < 60) {
+		                        contador = 0;
+		                        break;
+		                    }
+		                }
+		                if(contador > 0) {
+		                    aprobados++;
+		                }
+		            }
+		            cout << "El número de alumnos que aprobaron únicamente el último examen es: " << aprobados << endl;
+		            break;
+		        }
+		        default:
+		            cout << "Opción inválida" << endl;
+		            break;
+		    }
     			break;
     		case 9:
+    		/*Ejercicio 9: Escriba un programa que calcule el valor de: 1 * 2 * 3 *...* n (factorial)*/
+					
+  					 factorial = 1;
+    				cout << "Ingrese un número: ";
+   					cin >> n;
+   					 for (int i = 1; i <= n; ++i) {
+   					     factorial *= i;
+    					}
+			cout << "El factorial de " << n << " es: " << factorial << endl;
     			break;
     		case 10:
+    				/*Ejercicio 10: Escriba un programa que calcule el valor de: 1! +2! + 3! + ... + n! (suma de factoriales).*/
+			
     			break;
     		case 11:
     			break;
@@ -625,9 +703,7 @@ break;
     	
 	}while(x!=14);
      
-    /*Ejercicio 9: Escriba un programa que calcule el valor de: 1 * 2 * 3 *...* n (factorial)*/
 	
-	/*Ejercicio 10: Escriba un programa que calcule el valor de: 1! +2! + 3! + ... + n! (suma de factoriales).*/
 	
 	/*Ejercicio 11: Escriba un programa que calcule el valor de: 2^1+2^2+2^3+...+2^n  */
 	
@@ -641,6 +717,7 @@ break;
            	   		return 0;
 
    }
+  
    
 
    
