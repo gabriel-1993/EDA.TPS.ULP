@@ -566,7 +566,7 @@ int main(){
 		cout<<"Ingresar un NUM del 1 al 10 para cada consigna "<<endl;
 		cout<<"11 para salir"<<endl;
 		cin >> respB;
-		switch (respb){
+		switch (respB){
 		case 1: ejercicio1b();
 				break;
 		case 2: ejercicio2b();
