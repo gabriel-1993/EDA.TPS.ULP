@@ -7,6 +7,8 @@ using namespace std;
 //librerias para generar num Aleatorio
 #include <cstdlib>
 #include <ctime>
+#include <vector>
+
 
 
 /*Parte A Bucles: Conjunto de instrucciones que se repiten al cumplirse una condición.
@@ -476,11 +478,70 @@ void ejercicio7b(){
 		cout<<"La matriz no es simetrica"<<endl;
 	}
 }
+//Ejercicio 8: Se desea saber la temperatura media trimestral de 4 países. Para ello se tiene como dato las temperaturas medias mensuales de dichos países. - Se debe ingresar el nombre del país y seguidamente las tres temperaturas medias mensuales. Seleccionar las estructuras de datos adecuadas para el almacenamiento de los datos en memoria.
+
+void ejercicio8b() {
+ 	string paises[4];
+ 	int temperaturas[4][12];
+ 	
+ 	//  A) Cargar por teclado los nombres de los países y las temperaturas medias mensuales.
+
+ 	 // Ingresar paises
+    for (int i = 0; i < 4; i++) {
+        cout << "Ingrese el nombre del pais " << i + 1 << ": ";
+        cin >> paises[i];
+    }
+    
+     // Ingresar temperaturas medias mensuales
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 12; j++) {
+            cout << "Ingrese la temperatura media del mes " << j + 1 << " para " << paises[i] << ": ";
+            cin >> temperaturas[i][j];
+        }
+    }
+    
+    //  B) Imprimir los nombres de los países y las temperaturas medias mensuales de las mismas.
+	 cout << "\nNombres de los paises y temperaturas medias mensuales:" << endl;
+    for (int i = 0; i < 4; i++) {
+        cout << paises[i] << ": ";
+        for (int j = 0; j < 12; j++) {
+            cout << temperaturas[i][j] << " ";
+        }
+        cout << endl;
+    }
+    //   C) Calcular la temperatura media trimestral de cada pais.
+    //   D) Imprimir los nombres de los países y las temperaturas medias trimestrales.
+    //   E) Imprimir el nombre de la provincia con la mayor temperatura media trimestral.*/
+	//EN EL PUNTO E INTERPRETO QUE SERIA PAIS NO Provincia
+    double sumador=0;
+    double mediaTrimestral=0;
+    double maxMediaTrimestral=0;
+    int ubicacionPais;
+	 for (int i = 0; i < 4; i++) {
+        cout << "Temperatura media trimestral de "<<paises[i] << ": ";
+        for (int j = 0; j < 12; j++) {
+        	cout<<"Trimestre con los meses : "<<j+1<<"-"<<j+2<<"-"<<j+3<<endl;
+        	sumador+=temperaturas[i][j]+temperaturas[i][j+1]+temperaturas[i][j+2];
+        	mediaTrimestral= sumador/3;
+        	if(mediaTrimestral>maxMediaTrimestral){
+        		maxMediaTrimestral = mediaTrimestral;
+        		ubicacionPais=i;
+			}
+            cout << mediaTrimestral<<endl;
+            sumador=0;
+            mediaTrimestral=0;
+            j+=2;
+        }
+        cout << endl;
+        cout<<"El Pais con la mayor temperatura media trimestral es "<<paises[ubicacionPais]<<" max media trim ="<<maxMediaTrimestral<<endl;
+    }
+    
+ 
+}
 
 /*Ejercicio 8: Realice un programa que calcule el producto de dos matrices cuadradas de 3x3.*/
-
-	void ejercicio8b(){
-		
+/*
+void ejercicio8b1(){
 		int matriz1[3][3]={{1,2,3},{4,5,6},{7,8,9}};
 		int matriz2[3][3]={{10,11,12},{13,14,15},{16,17,18}};
 		int resultados[3][3];
@@ -494,11 +555,10 @@ void ejercicio7b(){
 		cout<<""<<endl;
 		}
 	}
+*/
+
 	
-/*Ejercicio 9: Hacer un programa en C++ que muestre en pantalla un tablero de ajedrez de la
-siguiente manera:
-1. - Los peones con la letra P.
-2. - Las torres con la letra T.
+/* - Los peones con la letra P.
 3. - Los caballos con la letra C.
 4. - Los alfiles con la letra A.
 5. - El rey con la letra M.
